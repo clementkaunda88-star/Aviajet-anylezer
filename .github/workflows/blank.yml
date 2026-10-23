@@ -6,14 +6,11 @@ on:
 jobs:
   check-project:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Download repository files
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Check project ZIP
         run: |
-          echo "Checking for the Android project..."
           ls -la
           test -f Avi_Jet_Analyzer_Android_Project.zip
-          echo "Project ZIP found!"
