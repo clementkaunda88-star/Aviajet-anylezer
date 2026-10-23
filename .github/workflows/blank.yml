@@ -1,1 +1,14 @@
+name: Build Avi Jet Analyzer APK
 
+on:
+  workflow_dispatch:
+
+jobs:
+  check-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check project ZIP
+        run: ls -la
